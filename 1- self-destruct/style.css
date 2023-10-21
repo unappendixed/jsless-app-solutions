@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: hsl(264, 10%, 10%);
+    height: 100vh;
+    color: white;
+    font-size: 16pt;
+}
+
+.content {
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+#self-destruct {
+    position: relative;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    display: block;
+    font-size: 42pt;
+    border: none;
+}
+
+#self-destruct::after {
+    content: '';
+    position: absolute;
+    background: black;
+    inset: -5px;
+    top: 0;
+    bottom: -10px;
+    border-radius: 50%;
+    z-index: -1;
+}
